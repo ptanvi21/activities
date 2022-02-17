@@ -1,0 +1,317 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.image1 {
+    margin-left:3%;
+    float:left;
+    height:250px;
+    width:250px;
+ }
+ 
+ .head1{
+    width:100%;
+    height:auto;
+    padding:2%;
+    padding-bottom:80px;
+ }
+ 
+ .text1 {
+    margin:0px;
+ }
+
+ #myname{
+    padding-left:310px;
+    padding-top: 40px;
+    font-size:50px
+ }
+
+ #sub1{
+    font-size:25px;
+    color:rgb(102,102,102);
+    padding-left:310px;
+}
+
+#intro1{
+    font-size:17px;
+    padding-left:310px;
+}
+
+.tex1{
+    padding-left: 20px;
+}
+
+h1{
+    color:rgb(48,59,77);
+}
+
+.head{
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-top:50px
+}
+  
+.container{
+    padding-top: 40px;
+}
+  img {
+    max-width: 100%;
+  }
+  
+  .image {
+    flex-basis: 15%
+  } 
+  
+  .text {
+    font-size: 50px;
+    padding-left: 0;
+  } 
+
+  #sub{
+      font-size:25px;
+      color:rgb(102,102,102);
+  }
+
+  #intro{
+      font-size:17px;
+  }
+
+  p{
+      padding:0.5%
+  }
+  
+
+.container {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    min-height:100vh;
+}
+
+.urls1{
+    padding-top:30px;
+    padding-bottom:30px;
+    background-color: rgb(220,220,220);
+    padding-left:65px;
+}
+
+.urls1 ul{
+    position:relative
+}
+
+.urls ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+}
+
+.urls1 ul li .icon{
+    display: inline-block;
+    width:30px;
+    font-size:20px;
+    color:rgb(48,59,77);
+}
+
+.urls1 ul li span a{
+    font-weight:400;
+    font-size:19px;
+    text-decoration: none;
+    color: #000;
+    
+}
+
+.urls2{
+    padding-top:30px;
+    padding-bottom:30px;
+    background-color: rgb(220,220,220);
+    padding-left:180px;
+}
+
+.urls2 ul li .icon{
+    display: inline-block;
+    width:30px;
+    font-size:18px;
+    color:rgb(48,59,77);
+}
+
+.urls2 ul li span a{
+    font-weight:400;
+    font-size:20px;
+    text-decoration: none;
+    color: #000;
+}
+
+li{
+    padding: 5px;;
+}
+
+.education{
+    padding-top:20px;
+    padding-left: 30px;
+}
+
+.edu{
+    padding-bottom: 40px;
+    padding-left:30px  
+}
+
+#etitles{
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+.eduname{
+    font-size:24px;
+}
+
+/* .titles{
+    padding-bottom: 20px;
+    padding-left: 30px;
+} */
+
+.details{
+    color: rgb(105,105,105);
+    font-size: 16px;
+}
+
+#year{
+    float: left;
+}
+
+#grade{
+    float: right;
+    /* padding-right: 5px; */
+}
+
+.activities{
+    padding-top:50px;
+    padding-left: 30px;
+}
+
+.activityname{
+    font-size:21px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+#atitles{
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+
+.skills{
+    padding-top:20px;
+    padding-left: 180px;/* padding-bottom: 10px; */
+    padding-right: 100px; 
+}
+#skillinfo{
+    display:inline-block;
+}
+
+.skills ul{
+    font-size: 20px;
+    justify-content:center;
+}
+
+ .skills ul li {
+    
+    display: inline-block;
+    padding:10px;
+    /* padding-left:20px; */
+    /* padding-right:20px; */
+    margin-top: 12px;
+    margin-right: 10px;
+    background-color:rgb(169,169,169); 
+    color: #fff;
+    border-radius:7px;
+    line-height:30px  
+    
+} 
+
+.ide{
+    background-color:rgb(169,169,169); 
+    color: #fff;
+    border-radius:7px;
+    padding:10px;
+    font-size: 20px;
+    margin-top:10px;
+    padding-top:10px
+    /* padding:10px; */
+}
+
+.projects{
+    padding-top:40px;
+    padding-left: 180px;
+}
+
+/* .project_info{
+    font-size: 22px;
+} */
+
+.project_info{
+    /* font-size:18px; */
+    padding-top: 15px;
+    /* padding-left: 40px; */
+    padding-right: 80px;
+}
+
+.projectstitle{
+    font-size:22px;
+}
+
+.projectdescription{
+    font-size:18px;
+    padding-left: 10px;
+    padding-right: 90px; 
+}
+
+.achievements{
+    padding-top:40px;
+    padding-left: 180px;
+}
+
+.projectdescription a{
+    color:teal;
+}
+
+
+.achievementsname{
+    font-size:22px;
+    padding-bottom: 15px;
+    padding-top:15px;
+    padding-right: 90px; 
+}
+
+.interests{
+    padding-top:20px;
+    padding-left: 180px;/* padding-bottom: 10px; */
+    padding-right: 90px; 
+    padding-bottom:200px
+}
+
+.interests ul{
+    font-size: 20px;
+    justify-content:center;
+}
+
+.interests ul li {
+    display: inline-block;
+    padding:12px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-top: 12px;
+    margin-right: 20px;
+    border: 2px solid rgb(169,169,169);
+    border-radius:7px;
+    line-height:30px
+    /* border-spacing: 40px; */
+}
+
