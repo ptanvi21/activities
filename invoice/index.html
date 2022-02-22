@@ -143,7 +143,8 @@
 <table class="table table-borderless">
     <thead>
         <tr>
-            <th class="col-sm-6 "> Name</th>
+            <th class="col-sm-5 "> Name</th>
+            <th class="col-sm-1 text-right"></th>
             <th class="col-sm-1 text-right">Quantity</th>
             <th class="col-sm-1 text-right">Rate</th>
             <th class="col-sm-1 text-right"></th>
@@ -152,12 +153,8 @@
     </thead>
     <tbody id="items_table"></tbody>
 </table>
-<button id="clone">
-    <i class="fa-solid fa-copy" ></i>
-</button>
 <br>
-<br>
-<button id="addRow" class="btn btn-primary">Add a row</button><br><br>
+<button id="addRow" class="btn btn-primary">New Line</button><br><br>
 <br>
 
 
@@ -213,7 +210,7 @@
         <div class="col" ></div>
         <div class="col">
             <div class="row" >
-                <div class="col space">
+                <div class="col space" id="dues">
                     <strong>Total </strong>
                 </div>
                 <div class="col">
@@ -227,23 +224,23 @@
         </div>
       </div>
 </tr>
-
+<br>
 <tr>
     <div class="row">
         <div class="col" ></div>
         <div class="col" ></div>
         <div class="col">
             <div class="row" id="redborder">
-                <div class="col space" id="bg">
+                <div class="col space bg-danger text-white" id="bg">
                     <strong>Total Due </strong>
                 </div>
                 <div class="col">
-                    <input type="text" id="bord" class="form-control no-border text-left bold currname" placeholder="INR">
+                    <input type="text" id="bord" class="form-control no-border text-left bold currname bg-danger text-white" placeholder="INR">
                 </div>
               </div>
         </div>
-        <div class="col" >
-            <input type="text" class="form-control text-right bold no-border " class="redd" id="allSum" placeholder="1100.00" />
+        <div class="col " >
+            <input type="text" class="form-control text-right bold no-border bg-danger text-white" id="allSum" placeholder="1100.00" />
         </div>
       </div>
 </tr>

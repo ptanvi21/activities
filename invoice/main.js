@@ -71,6 +71,7 @@ function addItem() {
     var itemRow =
         '<tr id="item" class="rowss">' +
         '<td><input type="text" class="form-control row-name" placeholder="Items you are selling" /></td>' +
+        '<td><button id="clone" class="btn btn-light copy-button"><i class="fa-solid fa-copy" ></i></button></td>' +
         '<td><input type="text" class="form-control update row-quantity " placeholder="100" /></td>' +
         '<td><input type="text" class="form-control update row-price " placeholder="10.00" /></td>' +
         '<td><input type="text"  class="form-control border-right text-left currname" placeholder="INR"></td>'+
@@ -91,13 +92,14 @@ $("#currency").on("change",function(){
     $(".currname").val(selValue);
 });
 
-$('#clone').on('click', () => {
-    const $lastRow = $('#item:first');
-    const $newRow = $lastRow.clone();
-    $newRow.insertAfter($lastRow);
-  });
+// CLONE
+$(document).on('click', '.copy-button', function(){
+    var rawHTML = $(this).parents('tr').clone().insertAfter($(this).parents('tr'));
+    calculateTotals();
+})
 
-  $(function() {
+
+$(function() {
   $("#datepicker").datepicker({
      dateFormat: 'yy-mm-dd'
   });
