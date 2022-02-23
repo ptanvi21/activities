@@ -12,238 +12,263 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="https://kit.fontawesome.com/6058a5a24c.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <!-- <script src="style.css"></script> -->
 </head>
 <body>
-    <div class="container">
-        <div class="row mt-6">
-          <div class="col-8">
-            
-                <div class="input-group mb-6">
-                    <div class="col-1">
-                        <button type="button" class="btn btn-danger">Due</button>
-                    </div>
-                    <div class="col-1">
-                        <h3 align="center">Invoice</h3>
-                    </div>
-                </div>
-                <br>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="usr" value="Thank you for your purchase. Timely payment will be accepted.">
-                    </input>
-                </div>
-            <!-- </div> -->
-          </div>
-          <div class="col-4 logo">
-                <img src="logo.png" alt="logo" height="170px">
-          </div>
-        </div>
-
-    <br>
-    
-
-    <div class="row">
-        <div class="col-3">
-            <strong>Invoice No.</strong>
-            <form>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text">#</span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="INV-694">
-                </div>
-            </form>
-        </div>
-        <div class="col-5">
-            <div class="thumbnail">
-                <strong>Language</strong>
-                <div class="input-group">
-                    <select id="language" class="form-select menu">
-                        <option value="en">English(US)</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-4">
-            <strong>Currency</strong>
-            <div class="input-group menu">
-                <select id="currency" class="myactivity form-select menu" >
-                    <option value="INR" >Indian Rupee - INR</option>
-                    <option value="USD">United States Dollar - USD</option>
-                    <option value="RUB">Russian Ruble - RUB</option>
-                    <option value="EUR">Euro - EUR</option>
-                </select>
-            </div>
-        </div>
-
-    </div>
-
-    <hr>
-
-    <div class="row">
-        <div class="col-8">
-            <div class="form-group w-50">
-                <label for="exampleTextarea">
-                   <strong>From</strong> 
-                </label>
-                <div>Your Business Inc.</div>
-                <div>Your Address</div>
-                <div>City & Zip, Your Country</div>
-            </div>
-            <br>
-            <div class="form-group w-50">
-                <label for="exampleTextarea">
-                    <strong>To</strong>
-                </label>
-                <textarea class="form-control menu" id="exampleTextarea" rows="3" placeholder="Address"></textarea>
-            </div>
-            
-
-        </div>
-        <div class="col-4">
-
-            <div class="row row-cols-1">
-                <div class="col">
-                    <strong>Date</strong> 
-                    <input type="text" class="form-control" id="datepicker">
-                </div>
-
-                <div class="col">
-                    <strong>Invoice Due</strong>
-                    <div class="input-group menu">
-                    <select id="invoicedue" class="myactivity form-select menu" >
-                            <option value="five">After 5 days</option>
-                            <option value="ten">After 10 days</option>
-                            <option value="fifteen">After 15 days</option>
-                            <option value="twenty">After 20 days</option>
-                            <option value="thirty">After 30 days</option>
-                    </select>
-                </div>
-
-                <div class="col">
-                    <strong>Purchase Order Number</strong>
-                    <input type="text" class="form-control" placeholder="PO-123">
-                    
-                </div>
-            </div>
-            </div>
-               
-        </div>
-      </div>
-
-    <hr>
-
-
-    
-
    
 
-    <!-- <input type="text" id="textFieldTextJQ" class="form-control" placeholder="INR"> -->
 
-<table class="table table-borderless">
-    <thead>
+    <div id="content">
+        <div class="container">
+            <div class="row mt-6">
+              <div class="col-8">
+                
+                    <div class="input-group mb-6">
+                        <div class="col-1">
+                            <button type="button" class="btn btn-danger">Due</button>
+                        </div>
+                        <div class="col-1">
+                            <h3 align="center">Invoice</h3>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="usr" value="Thank you for your purchase. Timely payment will be accepted.">
+                        </input>
+                    </div>
+                <!-- </div> -->
+              </div>
+              <div class="col-4 logo">
+                    <img src="logo.png" alt="logo" height="170px">
+              </div>
+            </div>
+    
+        <br>
+        
+    
+        <div class="row">
+            <div class="col-3">
+                <strong>Invoice No.</strong>
+                <form>
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">#</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="INV-694">
+                    </div>
+                </form>
+            </div>
+            <div class="col-5">
+                <div class="thumbnail">
+                    <strong>Language</strong>
+                    <div class="input-group">
+                        <select id="language" class="form-select bg-light menu">
+                            <option value="en">English(US)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-4">
+                <strong>Currency</strong>
+                <div class="input-group menu">
+                    <select id="currency" class="myactivity form-select menu bg-light currency-select currchange"name="test">
+                        <option value="INR" id="1" data-price=1>Indian Rupee - INR</option>
+                        <option value="USD" id="2" data-price=0.013>United States Dollar - USD</option>
+                        <option value="RUB" id="3" data-price=1.06>Russian Ruble - RUB</option>
+                        <option value="EUR" id="4" data-price=0.012>Euro - EUR</option>
+            </select>
+        </div>
+        <!-- <div class="col">
+            <input type="text" id="textFieldTextJQR" class="form-control no-border text-left bold" placeholder="INR">
+        </div> -->
+        <!-- <div id="prevlog"></div>
+        <div id="currlog"></div> -->
+            </div>
+    
+        </div>
+    
+        <hr>
+    
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group w-50">
+                    <label for="exampleTextarea">
+                       <strong>From</strong> 
+                    </label>
+                    <div>Your Business Inc.</div>
+                    <div>Your Address</div>
+                    <div>City & Zip, Your Country</div>
+                </div>
+                <br>
+                <div class="form-group w-50 ">
+                    <label for="exampleTextarea">
+                        <strong>To</strong>
+                    </label>
+                    <textarea class="form-control menu bg-light " id="exampleTextarea" rows="3" placeholder="Address"></textarea>
+                </div>
+                
+    
+            </div>
+            <div class="col-4">
+    
+                <div class="row row-cols-1">
+                    <div class="col">
+                        <strong>Date</strong> 
+                        <input type="text" class="form-control" id="datepicker">
+                    </div>
+    
+                    <div class="col">
+                        <strong>Invoice Due</strong>
+                        <div class="input-group menu">
+                        <select id="invoicedue" class="myactivity form-select bg-light  menu" >
+                                <option value="five">After 5 days</option>
+                                <option value="ten">After 10 days</option>
+                                <option value="fifteen">After 15 days</option>
+                                <option value="twenty">After 20 days</option>
+                                <option value="thirty">After 30 days</option>
+                        </select>
+                    </div>
+    
+                    <div class="col">
+                        <strong>Purchase Order Number</strong>
+                        <input type="text" class="form-control" placeholder="PO-123">
+                        
+                    </div>
+                </div>
+                </div>
+                   
+            </div>
+          </div>
+    
+        <hr>
+    
+    
+    
+       
+    
+        <!-- <input type="text" id="textFieldTextJQ" class="form-control" placeholder="INR"> -->
+    
+    <table class="table table-borderless" > 
+        <thead>
+            <tr>
+                <th class="col-sm-5"> Name</th>
+                <th class="col-sm-0.5 text-right"></th>
+                <th class="col-sm-0.5 text-right"></th>
+                <th class="col-sm-1 text-right">Quantity</th>
+                <th class="col-sm-1 text-right">Rate</th>
+                <th class="col-sm-1 text-right"></th>
+                <th class="col-sm-3 text-right">Amount</th>
+                <th>
+
+                </th>
+            </tr>
+        </thead>
+        <tbody id="items_table"></tbody>
+    </table>
+    <br>
+    <button id="addRow" class="btn btn-primary">New Line</button><br><br>
+    <br>
+    
+    
+    <table class="table table-borderless ">
+     <hr>
+    
+     <tr id="items_table">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col">
+                <strong>Sub Total</strong>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control no-border text-right" id="subTotal" placeholder="0.00" />
+            </div>
+          </div>
+     </tr>
+    
+    <br>
+    
         <tr>
-            <th class="col-sm-5 "> Name</th>
-            <th class="col-sm-1 text-right"></th>
-            <th class="col-sm-1 text-right">Quantity</th>
-            <th class="col-sm-1 text-right">Rate</th>
-            <th class="col-sm-1 text-right"></th>
-            <th class="col-sm-3 text-right">Amount</th>
+            <div class="row">
+                <div class="col" ></div>
+                <div class="col" ></div>
+                <div class="col">
+                    <div class="row" id="caltax">
+                        <div class="col-md-6" >
+                            <strong>
+                                <p class="border-0">
+                                    Value Added Tax 
+                                </p>
+                            </strong>
+                        </div>
+                        <div class="col-md-4">
+                            
+                                <input type="number" value="10" id="taxPercentage" class="form-control " >
+                         </div>
+                      </div>
+                </div>
+                <div class="col" >
+                <input type="text" class="form-control no-border text-right" id="totalTax" placeholder="0.00" />    
+                </div>
+              </div>
         </tr>
-    </thead>
-    <tbody id="items_table"></tbody>
-</table>
-<br>
-<button id="addRow" class="btn btn-primary">New Line</button><br><br>
-<br>
-
-
-<table class="table table-borderless">
- <hr>
-
- <tr id="items_table">
-    <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col">
-            <strong>Sub Total</strong>
-        </div>
-        <div class="col">
-            <input type="text" class="form-control no-border text-right" id="subTotal" placeholder="0.00" />
-        </div>
-      </div>
- </tr>
-
-<br>
-
+    <br>
+    
+     <tr>
+        <div class="row">
+            <div class="col" ></div>
+            <div class="col" ></div>
+            <div class="col">
+                <div class="row" >
+                    <div class="col space" id="dues">
+                        <strong>Total </strong>
+                    </div>
+                    <div class="col">
+                        <input type="text" id="totalcurr" class="form-control no-border text-left bold" placeholder="INR">
+                    </div>
+                  </div>
+            </div>
+            <div class="col" >
+                <input type="text" class="form-control no-border text-right bold" id="grandTotal"  placeholder="1100.00" />
+                
+            </div>
+          </div>
+    </tr>
+    <br>
     <tr>
         <div class="row">
             <div class="col" ></div>
             <div class="col" ></div>
             <div class="col">
-                <div class="row" id="caltax">
-                    <div class="col-md-6" >
-                        <strong>
-                            <p class="border-0">
-                                Value Added Tax 
-                            </p>
-                        </strong>
+                <div class="row" id="redborder">
+                    <div class="col space bg-danger text-white" id="bg">
+                        <strong>Total Due </strong>
                     </div>
-                    <div class="col-md-4">
-                        
-                            <input type="number" value="10" id="taxPercentage" class="form-control " >
-                        
-        
-                        </div>
+                    <div class="col">
+                        <input type="text" id="bord" class="form-control no-border text-left bold currname bg-danger text-white" placeholder="INR">
+                    </div>
                   </div>
             </div>
-            <div class="col" >
-            <input type="text" class="form-control no-border text-right" id="totalTax" placeholder="0.00" />    
+            <div class="col " >
+                <input type="text" class="form-control text-right bold no-border bg-danger text-white" id="allSum" placeholder="1100.00" />
             </div>
           </div>
     </tr>
+    </div>
+    <br>
+    <br>
+    <div class="border border-light p-3 mb-4">
+        <div class="text-center">
+          <button type="button" onclick="convertHTMLToPDF()" class="btn btn-info">Generate PDF</button>
+        </div>
+      </div>  
+<br>
 <br>
 
- <tr>
-    <div class="row">
-        <div class="col" ></div>
-        <div class="col" ></div>
-        <div class="col">
-            <div class="row" >
-                <div class="col space" id="dues">
-                    <strong>Total </strong>
-                </div>
-                <div class="col">
-                    <input type="text" id="textFieldTextJQR" class="form-control no-border text-left bold" placeholder="INR">
-                </div>
-              </div>
-        </div>
-        <div class="col" >
-            <input type="text" class="form-control no-border text-right bold" id="grandTotal"  placeholder="1100.00" />
-            
-        </div>
-      </div>
-</tr>
-<br>
-<tr>
-    <div class="row">
-        <div class="col" ></div>
-        <div class="col" ></div>
-        <div class="col">
-            <div class="row" id="redborder">
-                <div class="col space bg-danger text-white" id="bg">
-                    <strong>Total Due </strong>
-                </div>
-                <div class="col">
-                    <input type="text" id="bord" class="form-control no-border text-left bold currname bg-danger text-white" placeholder="INR">
-                </div>
-              </div>
-        </div>
-        <div class="col " >
-            <input type="text" class="form-control text-right bold no-border bg-danger text-white" id="allSum" placeholder="1100.00" />
-        </div>
-      </div>
-</tr>
 <script src="main.js"></script>
 </body>
 </html>
